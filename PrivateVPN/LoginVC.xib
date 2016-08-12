@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="LoginVC">
+            <connections>
+                <outlet property="btnForgotPassword" destination="cpb-zC-BxA" id="pEM-j2-phj"/>
+                <outlet property="btnLogin" destination="tCs-Iv-ati" id="0AD-4H-laG"/>
+                <outlet property="chkRememberMe" destination="xwN-e4-NQ3" id="osJ-Vl-1fX"/>
+                <outlet property="progressLoggingIn" destination="iL7-aT-b0y" id="GWB-eE-vWg"/>
+                <outlet property="txtErrorMessage" destination="Wyq-Du-XFf" id="FIB-Y0-Y9h"/>
+                <outlet property="txtPassword" destination="KHM-jN-3Vb" id="bAN-Yl-MQg"/>
+                <outlet property="txtUsername" destination="1zF-eM-Nf0" id="4um-ec-Ab0"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="viewLoggingIn" destination="lsI-yz-CCx" id="sPE-mb-4mU"/>
+                <outlet property="viewLogin" destination="hdi-5D-bzi" id="FE7-J4-rS7"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="500"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wyq-Du-XFf">
+                    <rect key="frame" x="38" y="314" width="274" height="28"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="OC5-Mb-nnD">
+                        <font key="font" metaFont="systemBold" size="15"/>
+                        <color key="textColor" red="0.54509803921568623" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lsI-yz-CCx">
+                    <rect key="frame" x="100" y="230" width="150" height="100"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTB-iC-6fX">
+                            <rect key="frame" x="35" y="70" width="80" height="20"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Logging in" id="feR-vp-tzH">
+                                <font key="font" size="14" name="HelveticaNeue"/>
+                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="iL7-aT-b0y">
+                            <rect key="frame" x="59" y="10" width="32" height="32"/>
+                        </progressIndicator>
+                    </subviews>
+                </customView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdi-5D-bzi">
+                    <rect key="frame" x="0.0" y="125" width="350" height="200"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dhc-FP-O8a">
+                            <rect key="frame" x="40" y="170" width="71" height="17"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Username" id="bo8-Ox-ft7">
+                                <font key="font" metaFont="cellTitle"/>
+                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1zF-eM-Nf0">
+                            <rect key="frame" x="40" y="140" width="270" height="30"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Username" drawsBackground="YES" id="iZP-ak-NbW" customClass="VCenterTextFieldCell">
+                                <font key="font" metaFont="cellTitle"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                            <connections>
+                                <outlet property="nextKeyView" destination="KHM-jN-3Vb" id="WVO-9B-hgd"/>
+                            </connections>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kRZ-qB-oS5">
+                            <rect key="frame" x="40" y="115" width="71" height="17"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Password" id="6hP-9M-D08">
+                                <font key="font" metaFont="cellTitle"/>
+                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KHM-jN-3Vb">
+                            <rect key="frame" x="40" y="85" width="270" height="30"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" id="Zyg-qU-m5P" customClass="VCenterSecureTextFieldCell">
+                                <font key="font" metaFont="cellTitle"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                            <connections>
+                                <action selector="onPasswordTextFieldAction:" target="-2" id="QlU-rE-m2o"/>
+                                <outlet property="nextKeyView" destination="1zF-eM-Nf0" id="3gK-SJ-1jO"/>
+                            </connections>
+                        </textField>
+                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xwN-e4-NQ3">
+                            <rect key="frame" x="38" y="60" width="120" height="20"/>
+                            <buttonCell key="cell" type="check" title="Remember me" bezelStyle="regularSquare" imagePosition="left" inset="2" id="U8G-Yt-AH6">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" size="13" name="HelveticaNeue"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onCheckRememberMe:" target="-2" id="Cvc-ck-nrx"/>
+                                <outlet property="nextKeyView" destination="tCs-Iv-ati" id="mgi-0p-J5g"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpb-zC-BxA">
+                            <rect key="frame" x="55" y="22" width="141" height="17"/>
+                            <buttonCell key="cell" type="inline" title="Forgot your password?" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="jze-3X-fgU">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="smallSystemBold"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onClickForgotPassword:" target="-2" id="4dm-Q6-CUe"/>
+                            </connections>
+                        </button>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EVO-mh-b40">
+                            <rect key="frame" x="40" y="26" width="8" height="10"/>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="lock" id="sRI-X6-3mP"/>
+                        </imageView>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tCs-Iv-ati">
+                            <rect key="frame" x="220" y="15" width="90" height="30"/>
+                            <buttonCell key="cell" type="squareTextured" title="LOG IN" bezelStyle="texturedSquare" image="ButtonBackground" imagePosition="overlaps" alignment="center" imageScaling="axesIndependently" inset="2" id="8ZJ-5f-d3q">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system" size="14"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onClickLogin:" target="-2" id="CLw-5Y-gw1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </customView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gM-na-Uvd">
+                    <rect key="frame" x="30" y="350" width="290" height="60"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="hg0-Ca-RA0"/>
+                </imageView>
+            </subviews>
+            <point key="canvasLocation" x="319" y="367"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="ButtonBackground" width="126.75" height="44.25"/>
+        <image name="lock" width="8" height="10"/>
+        <image name="logo" width="376" height="53"/>
+    </resources>
+</document>

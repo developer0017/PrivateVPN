@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  PrivateVPN
+//
+//  Created by oscar on 2/27/16.
+//  Copyright (c) 2016 Oscar. All rights reserved.
+//
+
+#ifndef PrivateVPN_PrefixHeader_pch
+#define PrivateVPN_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <Foundation/Foundation.h>
+#import "Global.h"
+
+
+#endif

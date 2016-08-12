@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="HomeVC">
+            <connections>
+                <outlet property="btnAdvanced" destination="7r4-wY-jSE" id="lCY-oH-VJK"/>
+                <outlet property="btnCancelConnecting" destination="HNM-nh-Pl1" id="hvh-pm-tuj"/>
+                <outlet property="btnConnect" destination="MyC-m0-pzl" id="a7S-hK-8YZ"/>
+                <outlet property="btnDisconnect" destination="UnF-sd-gjG" id="UUS-fW-1GY"/>
+                <outlet property="btnLiveSupport" destination="oQo-pn-ZgG" id="7sB-z3-nVF"/>
+                <outlet property="btnLogOut" destination="fwR-Hq-Vif" id="hDT-xY-hYW"/>
+                <outlet property="imgConnectionStatus" destination="pT5-yZ-ayw" id="T7X-Mg-E8A"/>
+                <outlet property="lblConnectedIP" destination="81m-ph-q6C" id="srg-FG-U8U"/>
+                <outlet property="lblConnectedServer" destination="aJd-14-V0D" id="Xfe-LS-Qyj"/>
+                <outlet property="lblConnecting" destination="KUi-xg-901" id="N2L-Z2-SGd"/>
+                <outlet property="lblConnectionStatus" destination="f2n-Pj-lC5" id="TfX-zG-4Fo"/>
+                <outlet property="lblDaysLeft" destination="D0Y-Q0-5o6" id="Qrz-Qb-YKV"/>
+                <outlet property="lblError" destination="UZB-Mp-ENs" id="e88-mO-xlV"/>
+                <outlet property="lblUsername" destination="2yL-FK-fd3" id="JoH-VT-EVy"/>
+                <outlet property="popupProtocolList" destination="c9A-vk-wj9" id="xiw-J0-aX7"/>
+                <outlet property="popupServerList" destination="Z0W-RX-CS2" id="7Jn-tf-kAm"/>
+                <outlet property="progressConnecting" destination="hQy-dw-fdl" id="FtO-Dd-Fi0"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="viewConnected" destination="8Sw-Ww-Ms4" id="57w-rf-vbJ"/>
+                <outlet property="viewConnecting" destination="d74-oq-hCR" id="nR1-Dv-5HQ"/>
+                <outlet property="viewContainer" destination="YaQ-fy-fsU" id="022-ZA-qwB"/>
+                <outlet property="viewHeader" destination="1JX-94-C7Z" id="FMO-4r-jYi"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="500"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7r4-wY-jSE">
+                    <rect key="frame" x="240" y="10" width="100" height="30"/>
+                    <buttonCell key="cell" type="squareTextured" title="ADVANCED" bezelStyle="texturedSquare" image="ButtonBackground" imagePosition="overlaps" alignment="center" imageScaling="axesIndependently" inset="2" id="0SW-2c-erd">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system" size="14"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onClickAdvanced:" target="-2" id="yrp-R5-jXD"/>
+                    </connections>
+                </button>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YaQ-fy-fsU" userLabel="viewContainer">
+                    <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                    <subviews>
+                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9A-vk-wj9">
+                            <rect key="frame" x="175" y="242" width="100" height="26"/>
+                            <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="V9f-iG-8hL" id="JTN-tv-cA8">
+                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="menu"/>
+                                <menu key="menu" id="FAj-n7-Q0V">
+                                    <items>
+                                        <menuItem state="on" id="V9f-iG-8hL"/>
+                                        <menuItem title="Item 2" id="Dtm-pk-MNz"/>
+                                        <menuItem title="Item 3" id="JDm-q4-wlP"/>
+                                    </items>
+                                </menu>
+                            </popUpButtonCell>
+                        </popUpButton>
+                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0W-RX-CS2">
+                            <rect key="frame" x="75" y="270" width="200" height="26"/>
+                            <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="LFH-lr-va3" id="o0V-QQ-7EL">
+                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="menu"/>
+                                <menu key="menu" id="Fv4-D5-1ZD">
+                                    <items>
+                                        <menuItem state="on" id="LFH-lr-va3"/>
+                                        <menuItem title="Item 2" id="ujS-g0-8D9"/>
+                                        <menuItem title="Item 3" id="Qzq-cH-mis"/>
+                                    </items>
+                                </menu>
+                            </popUpButtonCell>
+                        </popUpButton>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MyC-m0-pzl">
+                            <rect key="frame" x="90" y="170" width="170" height="30"/>
+                            <buttonCell key="cell" type="squareTextured" title="CONNECT" bezelStyle="texturedSquare" image="ButtonBackground" imagePosition="overlaps" alignment="center" imageScaling="axesIndependently" inset="2" id="HQv-ym-BaJ">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system" size="14"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onClickConnect:" target="-2" id="NGM-CO-hP6"/>
+                            </connections>
+                        </button>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UZB-Mp-ENs">
+                            <rect key="frame" x="75" y="220" width="200" height="20"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="ok" id="6J1-7C-xKh">
+                                <font key="font" size="14" name="HelveticaNeue"/>
+                                <color key="textColor" red="0.54509803921568623" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2n-Pj-lC5">
+                            <rect key="frame" x="100" y="70" width="150" height="20"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="NOT CONNECTED" id="58l-ot-lNL">
+                                <font key="font" size="14" name="HelveticaNeue"/>
+                                <color key="textColor" red="0.54509803921568623" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pT5-yZ-ayw">
+                            <rect key="frame" x="155" y="100" width="40" height="30"/>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="notconnected" id="kNH-oM-CN9"/>
+                        </imageView>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fwR-Hq-Vif">
+                            <rect key="frame" x="10" y="10" width="100" height="30"/>
+                            <buttonCell key="cell" type="squareTextured" title="LOG OUT" bezelStyle="texturedSquare" image="ButtonBackground" imagePosition="overlaps" alignment="center" imageScaling="axesIndependently" inset="2" id="dOd-VC-gCv">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system" size="14"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onClickLogOut:" target="-2" id="mrd-H5-cEw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </customView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d74-oq-hCR" userLabel="viewConnecting">
+                    <rect key="frame" x="0.0" y="138" width="350" height="140"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KUi-xg-901">
+                            <rect key="frame" x="100" y="120" width="150" height="20"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Connecting..." id="fed-0c-Glg">
+                                <font key="font" size="14" name="HelveticaNeue"/>
+                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="hQy-dw-fdl">
+                            <rect key="frame" x="159" y="65" width="32" height="32"/>
+                        </progressIndicator>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNM-nh-Pl1">
+                            <rect key="frame" x="90" y="20" width="170" height="30"/>
+                            <buttonCell key="cell" type="squareTextured" title="CANCEL" bezelStyle="texturedSquare" image="ButtonBackground" imagePosition="overlaps" alignment="center" imageScaling="axesIndependently" inset="2" id="Z59-B8-LYG">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system" size="14"/>
+                                <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onClickCancelConnecting:" target="-2" id="NGS-7U-sQv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </customView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Sw-Ww-Ms4" userLabel="viewConnected">
+                    <rect key="frame" x="0.0" y="50" width="350" height="270"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aJd-14-V0D">
+                            <rect key="frame" x="35" y="220" width="280" height="30"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="c0J-yO-hfS">
+                                <font key="font" size="14" name="HelveticaNeue"/>
+                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tca-6K-GOw">
+                            <rect key="frame" x="130" y="202" width="90" height="17"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="External IP" id="fGG-cu-u1c">
+                                <font key="font" size="14" name="HelveticaNeue"/>
+                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UnF-sd-gjG">
+                            <rect key="frame" x="90" y="120" width="170" height="30"/>
+                            <buttonCell key="cell" type="squareTextured" title="DISCONNECT" bezelStyle="texturedSquare" image="ButtonBackground" imagePosition="overlaps" alignment="center" imageScaling="axesIndependently" inset="2" id="C56-4w-vPG">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system" size="14"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onClickDisconnect:" target="-2" id="zTz-Lg-dyl"/>
+                            </connections>
+                        </button>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="81m-ph-q6C">
+                            <rect key="frame" x="50" y="160" width="250" height="30"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0.0.0.0" id="ZEQ-7F-5kD">
+                                <font key="font" size="24" name="HelveticaNeue"/>
+                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eha-5l-pbr">
+                            <rect key="frame" x="155" y="50" width="40" height="30"/>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="connected" id="myf-pO-iO3"/>
+                        </imageView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dAA-Jl-P3F">
+                            <rect key="frame" x="98" y="20" width="154" height="20"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="CONNECTED" id="4Pm-4o-aaJ">
+                                <font key="font" size="14" name="HelveticaNeue"/>
+                                <color key="textColor" red="0.69019607843137254" green="0.86274509803921573" blue="0.51372549019607838" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </customView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evi-SM-qjT">
+                    <rect key="frame" x="30" y="350" width="290" height="60"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="qkF-pk-ft1"/>
+                </imageView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1JX-94-C7Z" userLabel="viewHeader">
+                    <rect key="frame" x="0.0" y="452" width="350" height="48"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D0Y-Q0-5o6">
+                            <rect key="frame" x="250" y="23" width="100" height="25"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="border" alignment="center" title="Days left" drawsBackground="YES" id="fR4-QA-OM5">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.14509803921568626" green="0.35686274509803922" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                            </textFieldCell>
+                        </textField>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcA-EF-yVG">
+                            <rect key="frame" x="5" y="23" width="20" height="20"/>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="user" id="FK7-qJ-Wcn"/>
+                        </imageView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2yL-FK-fd3">
+                            <rect key="frame" x="32" y="28" width="120" height="17"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Label" id="6MO-uV-6bP">
+                                <font key="font" size="14" name="HelveticaNeue"/>
+                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oQo-pn-ZgG">
+                            <rect key="frame" x="32" y="3" width="85" height="21"/>
+                            <buttonCell key="cell" type="bevel" title="Live support" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="EW3-uz-lxQ">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system" size="14"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onClickLiveSupport:" target="-2" id="LUl-z7-JFx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </customView>
+            </subviews>
+            <point key="canvasLocation" x="238" y="572"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="ButtonBackground" width="126.75" height="44.25"/>
+        <image name="connected" width="55" height="42"/>
+        <image name="logo" width="376" height="53"/>
+        <image name="notconnected" width="55" height="42"/>
+        <image name="user" width="20" height="20"/>
+    </resources>
+</document>

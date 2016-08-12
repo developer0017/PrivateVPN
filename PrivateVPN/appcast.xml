@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>PrivateVPN1.1 Changelog</title>
+        <description>Most recent changes with links to updates.</description>
+        <language>en</language>
+        <item>
+            <title>PrivateVPN1.1</title>
+            <description>
+                <![CDATA[
+                    <ul>
+                    <li>PrivateVPN1.1</li>
+                    <li>Fixed few bugs on UI</li>
+                    <li>Added check for update.</li>
+                    </ul>
+                ]]>
+            </description>
+            <pubDate>Mon, 15 Mar 2016 15:20:11 +0000</pubDate>
+            <enclosure url="https://xu595.privatevpn.com/update/PrivateVPN1.1.zip" sparkle:version="1.1"
+            sparkle:dsaSignature="MC0CFF96BM64eWgkDCkDNpOAMCKjIJIUAhUAhL4AW3wfwNhB/LMa/1h8X5SK2uw="
+            length="225123" type="application/octet-stream" />
+        </item>
+    </channel>
+</rss>
